@@ -1,15 +1,14 @@
 <template>
 <div class="card shadow rounded me-auto">
-                  <Bar :chart-data="chartData" />
-                  <div class="card-body">
-                    <h5 class="card-title">Bar chart</h5>
-                    <p class="card-text">Воздуханский текст</p>
-                  </div>
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item">An item</li>
-                  </ul>
-                </div>
-  
+    <Bar :chart-data="chartData" />
+    <div class="card-body">
+        <h5 class="card-title">Bar chart</h5>
+        <p class="card-text">Воздуханский текст</p>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">An item</li>
+    </ul>
+</div>
 </template>
 
 <script>

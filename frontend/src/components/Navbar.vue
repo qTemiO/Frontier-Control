@@ -14,7 +14,7 @@
           </li>
     </ul>
     <a class="navbar-brand text-secondarys rounded fw-light" href="#">
-      POWERED BY<img src="../assets/K22.png"  style="margin-left: 10px;" height="34"/>
+      POWERED BY<img src="../assets/K22.svg"  style="margin-left: 10px;" height="34"/>
     </a>
     <div class=" bg-dark offcanvas offcanvas-dark offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-header">
@@ -25,7 +25,7 @@
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
           <li class="nav-item">
             
-            <a class="nav-link" href="#"> Link</a>
+            <a class="nav-link" href="#/charts">Представление в виде графиков-столбцов</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
