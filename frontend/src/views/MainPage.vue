@@ -4,7 +4,7 @@
     <div class="container-fluid background shadow-lg mt-5"
     style="width: 80%;">
         <div class="row">
-            <h1 class="bg-danger maintext text-center mt-4">АВТОМАТИЗИРОВАННАЯ СИСТЕМА ПОИСКА ХРЮШЕК У СТАСА БАРЕЦКОГО ЭАЭАЭАЭ</h1>
+            <h1 class="bg-danger maintext text-center me-auto ms-auto  mt-4">АВТОМАТИЗИРОВАННАЯ СИСТЕМА КЛАССИФИКАЦИИ КОДА ТНВ ЕАЭС "ВЕЛЕС"</h1>
             <div class="col">
                 <img src="../assets/logo2.svg" width="500px"
                 height="500px" class="rounded mx-auto d-block"
