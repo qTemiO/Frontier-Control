@@ -6,7 +6,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand text-light ms-3 fw-bold" href="#">
-      НАЗВАНИЕ ПРОЕКТА<img src="../assets/penis.png"  style="margin-left: 10px;" height="34"/>
+      ПРОЕКТ "ВЕЛЕС"<img src="../assets/veles.png"  style="margin-left: 10px;" height="34"/>
     </a>
     <ul class="ms-5 navbar-nav justify-content-end flex-grow-1 pe-3">
           <li class="nav-item ">
@@ -18,7 +18,7 @@
     </a>
     <div class=" bg-dark offcanvas offcanvas-dark offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title text-light fw-bold" id="offcanvasNavbarLabel ">Название проекта</h5>
+        <h5 class="offcanvas-title text-light fw-bold" id="offcanvasNavbarLabel ">ПРОЕКТ "ВЕЛЕС"</h5>
         <button type="button" class="btn-close bg-danger" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
