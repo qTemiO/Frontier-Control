@@ -161,7 +161,7 @@ class FilterUserConfig(AppConfig):
 
     logger.debug(f'\n{VECTOR_USER_FILTER_DATAFRAME}')
 
-    VECTOR_USER_FILTER_DATAFRAME = clean_sentences(VECTOR_USER_FILTER_DATAFRAME)
+    VECTOR_USER_FILTER_DATAFRAME = clean_sentences(VECTOR_USER_FILTER_DATAFRAME[:1000])
     VECTOR_USER_FILTER_DATAFRAME.dropna(inplace=True)
 
     # Adapt stop words

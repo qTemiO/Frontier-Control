@@ -56,20 +56,14 @@ class recommendFZ(APIView):
 
         results = []
 
-        codes = []
-        descriptions = []
-
         for index, row in prediction.iterrows():
-            code =  row['KOD_TNVED_SPR']
-            decription = row['OPISANIE_SPR']
-            
-            codes.append(code)
-            descriptions.append(decription)
+            data = {
+                'code': row['TNVED'],
+                'description': row['OPISANIE_SPR']
+            }
+            results.append(data)
 
-        top_codes = []
-        top_descriptions = []
-
-        
+        results.append(data)
 
         return JsonResponse({
             'data': results
@@ -84,19 +78,35 @@ class recommendUser(APIView):
         df = FilterUserConfig.VECTOR_USER_FILTER_DATAFRAME
 
         prediction = FilterUserConfig.predict(query, tfidf_mat=tfidf_mat, df=df, vectorizer=vectorizer)
-
-        results = []
-        for index, row in prediction.iterrows():
-            data = {
-                'code': row['TNVED'],
-                'description': row['OPISANIE_SPR']
-            }
-            results.append(data)
-
         logger.debug(prediction)
 
+        codes = []
+        for index, row in prediction.iterrows():
+            code =  row['TNVED']  
+            if len(codes) < 3 and code not in codes:
+                codes.append(int(code))
+                
+        smezh_df = FilterConfig.VECTOR_FILTER_DATAFRAME
+
+        total_recommends = []
+        for text in smezh_df['KOD_TNVED_SPR'].apply(lambda x: str(x)):
+            for code in codes:
+                if str(code) in text[:len(str(code))]:
+                    total_recommends.append(str(text))
+
+        total_data = []
+        for recommend in total_recommends:
+            if not smezh_df[smezh_df['KOD_TNVED_SPR'] == int(recommend)].empty:
+                description = smezh_df[smezh_df['KOD_TNVED_SPR'] == int(recommend)]['OPISANIE_SPR'].values[0]
+                total_data.append({
+                    'code': recommend,
+                    'description': description
+                })
+
+        logger.debug(total_data)
+
         return JsonResponse({
-            'data': results
+            'data': total_data
             })
 
     def post(self, request):
