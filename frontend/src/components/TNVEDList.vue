@@ -36,23 +36,12 @@ import {mapState} from 'vuex';
 export default {
   name: 'tnved',
   computed: mapState(['loading', 'tnved']),
-    computed: {
-    ...mapState(['searchQuery']),
-    query: {
-      get() {
-        return this.searchQuery;
-      },
-      set(val) {
-        return this.tnved;
-      }
-    }
-  },
 };
 </script>
 
 <style>
 .scroll-table-body {
-	height: 300px;
+	height: 500px;
 	overflow-x: auto;
 	margin-top: 0px;
 	margin-bottom: 20px;

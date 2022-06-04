@@ -20,7 +20,7 @@
     </div>
     <footer>
 
-        <div class="bg-dark text-light">О нас: Мы работаем тут <img height="64px" src="../assets/fsb.png">
+        <div class="bg-dark text-light"><img height="64px" src="../assets/fsb.png">
         </div>
     </footer>
 </div>
