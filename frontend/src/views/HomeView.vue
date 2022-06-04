@@ -12,7 +12,7 @@
                     <SearchVue></SearchVue>
           </div>
         </div>
-        <div class="row">
+        <div class="row mt-5">
           <div class="col">
             <TNVEDList></TNVEDList>
           </div>
