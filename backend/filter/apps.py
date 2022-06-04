@@ -16,7 +16,6 @@ nltk.download('stopwords')
 nltk.download('punkt')
 nltk.download('wordnet')
 
-from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
@@ -164,7 +163,7 @@ class FilterUserConfig(AppConfig):
 
     logger.debug(f'\n{VECTOR_USER_FILTER_DATAFRAME}')
 
-    VECTOR_USER_FILTER_DATAFRAME = clean_sentences(VECTOR_USER_FILTER_DATAFRAME[:1000])
+    VECTOR_USER_FILTER_DATAFRAME = clean_sentences(VECTOR_USER_FILTER_DATAFRAME)
     VECTOR_USER_FILTER_DATAFRAME.dropna(inplace=True)
 
     # Adapt stop words
@@ -180,3 +179,5 @@ class FilterUserConfig(AppConfig):
     def predict(query_sentence, tfidf_mat, df, vectorizer):
         best_index = get_recommendations_tfidf(query_sentence, tfidf_mat, vectorizer)
         return df[['TNVED', 'OPISANIE_SPR']].iloc[best_index][:10]
+
+    logger.success('Filter is ready!')

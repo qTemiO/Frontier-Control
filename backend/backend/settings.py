@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'main',
-    'filter'
+    'filter',
+    'classificator'
 ]
 
 MIDDLEWARE = [
