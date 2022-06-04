@@ -73,7 +73,7 @@ class recommendUser(APIView):
 
     def get(self, request, query):
         logger.success(query)
-        if not query: return HttpResponse(status-404)
+        if not query: return HttpResponse(status=404)
         tfidf_mat = FilterUserConfig.tfidf_mat
         vectorizer = FilterUserConfig.vectorizer
         df = FilterUserConfig.VECTOR_USER_FILTER_DATAFRAME
