@@ -12,7 +12,7 @@ export default createStore({
     state: {
       searchQuery: '',
       loading: false,
-      tnved: null
+      tnved: 'null'
     },
   },
   getters: {
@@ -22,7 +22,7 @@ export default createStore({
     [SET_SEARCH_QUERY]: (state, searchQuery) => state.searchQuery = searchQuery,
     [SET_LOADING]: (state, loading) => state.loading = loading,
     [SET_RESULT_RES]: (state, tnved) => state.tnved = tnved,
-    [RESET_SEARCH]: state => state.tnved = null
+    [RESET_SEARCH]: state => state.tnved = 'null'
   },
   actions: {
     setSearchQuery({commit}, searchQuery) {
@@ -31,7 +31,8 @@ export default createStore({
     async search({commit, state}) {
       commit(SET_LOADING, true);
       try {
-        const {data} = await axios.get(`http://localhost:8000/filter/recommendUser/${state.searchQuery}/`);
+        const {data} = await axios.get(`http://localhost:8000/filter/recommendUser/${state.searchQuery}/`)
+        if (data == 'null'){console.log('null')};
         commit(SET_RESULT_RES, data);
         console.log(data)
       } catch (e) {
