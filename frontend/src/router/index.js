@@ -9,7 +9,7 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/MainPage.vue')
   },
   {
-    path: '/charts',
+    path: '/tnved_classification/',
     name: 'main',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
