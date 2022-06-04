@@ -4,7 +4,7 @@
     <div class="container-fluid background shadow-lg"
     style="width: 80%;">
         <div class="row">
-            <h1 style="margin-top: 50px" class="bg-danger text-break d-inline-flex p-2 maintext text-center me-auto ms-auto  mt-4">АВТОМАТИЗИРОВАННАЯ СИСТЕМА КЛАССИФИКАЦИИ КОДА ТНВ ЕАЭС "ВЕЛЕС"</h1>
+            <h1 style="margin-top: 50px" class="bg-danger text-break d-inline-flex p-2 maintext text-center me-auto ms-auto  mt-4">АВТОМАТИЗИРОВАННАЯ СИСТЕМА КЛАССИФИКАЦИИ КОДА ТНВ ЕАЭС "ГЕРМЕС"</h1>
             <div class="col">
                 <img src="../assets/logo2.svg" width="500px"
                 height="500px" class="rounded mx-auto d-block"

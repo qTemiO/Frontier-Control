@@ -4,17 +4,18 @@
     <div class="container-fluid background_home shadow-lg"
     style="width: 70%;">
         <div class="container-fluid">
-              <img src="../assets/logo3.png" height="200" class="mx-auto d-block"
-                /> <h1 class="text-center">ПРОЕКТ "ВЕЛЕС"</h1>
+              <img src="../assets/mainLogo.png" height="200" class="mx-auto d-block"
+                /> <h1 class="text-center">ПРОЕКТ "ГЕРМЕС"</h1>
         </div>  
         <div class="row">
           <div class="col">
                     <SearchVue></SearchVue>
           </div>
         </div>
-        <div class="row mt-5">
+        <div class="row mt-4">
           <div class="col">
-            <TNVEDList></TNVEDList>
+            <ProbilityTable></ProbilityTable>
+            <VectorisationTable></VectorisationTable>
           </div>
         </div>
     </div>
@@ -29,9 +30,10 @@
 <script>
 import NavbarVue from '../components/Navbar.vue'
 import SearchVue from '../components/Search.vue'
-import TNVEDList from '../components/TNVEDList.vue'
+import ProbilityTable from '@/components/ProbilityTable.vue'
+import VectorisationTable from '../components/VectorisationTable.vue'
 export default {
-components: { NavbarVue, SearchVue, TNVEDList }}
+components: { NavbarVue, SearchVue, VectorisationTable, ProbilityTable }}
 </script>
 
 <style>
@@ -76,7 +78,6 @@ components: { NavbarVue, SearchVue, TNVEDList }}
 
 .background_home{
   background-color: rgba(255, 255, 255, 0.849);
-  height: 900px;
   
 }
 

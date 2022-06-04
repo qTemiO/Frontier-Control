@@ -7,13 +7,13 @@
 	<table>
 		<thead>
 			<tr>
-				<th>ТНВ КОД</th>
-				<th>Описание</th>
+				<th>10-значный код</th>
+				<th>Описание товара</th>
 			</tr>
             
 		</thead>
 	</table>	
-	<div class="scroll-table-body">
+	<div class="scroll-table-body ">
 		<table>
 			<tbody>
 				<tr v-for="item in tnved.data" :key="item.code">
@@ -41,20 +41,22 @@ export default {
 
 <style>
 .scroll-table-body {
-	height: 500px;
+	height: 400px;
 	overflow-x: auto;
 	margin-top: 0px;
 	margin-bottom: 20px;
-	border-bottom: 1px solid rgba(139, 8, 8, 0.548);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.699);
 }
 .scroll-table table {
-	width:100%;
+	box-shadow: 0 7px 6px rgba(0,0,0,0.3);
+	margin: auto;
+	width:75%;
 	table-layout: fixed;
 	border: none;
 }
 .scroll-table thead th {
 	font-weight: bold;
-	text-align: left;
+	text-align: center;
 	border: none;
 	padding: 10px 15px;
 	background: #0b831b96;
@@ -63,7 +65,7 @@ export default {
 	border-right: 1px solid rgb(10, 167, 49);
 }
 .scroll-table tbody td {
-	text-align: left;
+	text-align: center;
 	border-left: 1px solid #ddd;
 	border-right: 1px solid #ddd;
 	padding: 10px 15px;
