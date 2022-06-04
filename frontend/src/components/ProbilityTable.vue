@@ -2,45 +2,46 @@
 <div class="container">
     <div class="row">
         <div class="col">
-<div class="sscroll-table">
-    <div v-if="loading" key="loading">
-              <div class="text-center">
-                <div class="spinner-border" role="status"  style="width: 3rem; height: 3rem;">
-                    <span class="visually-hidden">Загрузка...</span>
+            <div class="sscroll-table">
+                <div v-if="loading" key="loading">
+                    <div class="text-center">
+                        <div class="spinner-border" role="status"
+                        style="width: 3rem; height: 3rem;">
+                            <span class="visually-hidden">Загрузка...</span>
+                        </div>
+                    </div>
                 </div>
+                <div v-else-if="probility" key="probility.probs">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>4-значный
+                                    код</th>
+                                <th>Вероятность</th>
+                            </tr>
+
+                        </thead>
+                    </table>
+                    <div class="sscroll-table-body ">
+                        <table>
+                            <tbody>
+                                <tr v-for="item in probility.data.data" :key="item.class">
+                                    <td>{{item.class}}</td>
+                                    <td>
+                                        {{item.probility * 100 }} %
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-    </div>
-    <div v-else-if="probility" key="probility.probs">
-	<table>
-		<thead>
-			<tr>
-				<th>4-значный код</th>
-				<th>Вероятность</th>
-			</tr>
-            
-		</thead>
-	</table>	
-	<div class="sscroll-table-body ">
-		<table>
-			<tbody>
-				<tr v-for="item in probility.data.data" :key="item.class">
-					<td>{{item.class}}</td>
-					<td>
-                    {{item.probility * 100 }} %
-                    </td>
-				</tr>
-			</tbody>
-		</table>
-    </div>
-	</div>	
-    <div v-else key="not-found">
-        <h1 class="text-center">Не найдено</h1>
-    </div>
-</div>
-</div>
+                <div v-else key="not-found">
+                    <h1 class="text-center">Не найдено</h1>
+                </div>
+            </div>
         </div>
     </div>
-
+</div>
 </template>
 
 <script>
@@ -62,7 +63,7 @@ export default {
 }
 .sscroll-table table {
     margin: auto;
-	width:50%;
+	width: 100%;
 	border: none;
     box-shadow: 0 7px 6px rgba(0,0,0,0.3);
      

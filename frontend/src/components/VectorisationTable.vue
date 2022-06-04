@@ -1,6 +1,11 @@
 <template>
 <div class="scroll-table">
     <div v-if="loading" key="loading">
+		<div class="text-center">
+                <div class="spinner-border spinner-border-danger" role="status"  style="width: 3rem; height: 3rem;">
+                    <span class="visually-hidden">Загрузка...</span>
+                </div>
+                </div>
     </div>
     <div v-else-if="tnved" key="tnved.data">
 	<table>
@@ -48,7 +53,7 @@ export default {
 .scroll-table table {
 	box-shadow: 0 7px 6px rgba(0,0,0,0.3);
 	margin: auto;
-	width:75%;
+	width:100%;
 	table-layout: fixed;
 	border: none;
 }
@@ -63,7 +68,7 @@ export default {
 	border-right: 1px solid rgb(10, 167, 49);
 }
 .scroll-table tbody td {
-	text-align: center;
+	text-align: justify;
 	border-left: 1px solid #ddd;
 	border-right: 1px solid #ddd;
 	padding: 10px 15px;

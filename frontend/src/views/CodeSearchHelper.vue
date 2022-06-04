@@ -4,25 +4,52 @@
     <div class="container-fluid  background_home shadow-lg"
     style="width: 70%;">
         <div class="container-fluid">
-              <img src="../assets/mainLogo.png" height="200" class="mx-auto d-block"
-                /> <h1 class="text-center">ПРОЕКТ "ГЕРМЕС"</h1>
-        </div>  
-        <div class="row">
-          <div class="col">
-                    <SearchVue></SearchVue>
+          <div class="row">
+            <div class="col"><img src="../assets/mainLogo.png" height="200"
+            class="mx-auto d-block" />
+            <h1 class="text-center">ПРОЕКТ "ГЕРМЕС"</h1></div>
+            <div class="col">
+              <div class="card">
+  <div class="card-body">
+    <div id="list-example" class="list-group">
+  <a class="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
+  <a class="list-group-item list-group-item-action" href="#list-item-2">Item 2</a>
+</div>
+<div data-bs-spy="scroll" data-bs-target=".list-example" data-bs-smooth-scroll="true" class="scrollspy" tabindex="1">
+  <h4 id="list-item-1">Item 1</h4>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio magnam quam sed quisquam veniam vero sequi officiis veritatis, consequuntur, nesciunt ipsum, facere esse totam eos laboriosam impedit aperiam excepturi in.</p>
+  <h4 id="list-item-2">Item 2</h4>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae voluptas quasi excepturi dolores blanditiis consequuntur quaerat, distinctio, sunt quis inventore sint, culpa reprehenderit mollitia ipsam vitae saepe enim eos? Aliquam.</p>
+
+</div>
+  </div>
+</div>
+</div>
           </div>
+            
+        </div>
+        <div class="row">
+            <div class="col">
+                <SearchVue></SearchVue>
+            </div>
         </div>
         <div class="row mt-4">
-          <div class="col">
-            <h3 class="text-center title-example">Вероятностная оценка</h3>
-            <ProbilityTable></ProbilityTable>
-            <h3 class="text-center title-example">Векторизация</h3>
-            <VectorisationTable></VectorisationTable>
-          </div>
+            <div class="col">
+                <h3 class="text-center title-example">Метод вероятностной оценки</h3>
+                <ProbilityTable></ProbilityTable>
+                <h3 class="text-center title-example">Метод векторизация</h3>
+                <VectorisationTable></VectorisationTable>
+            </div>
+            <div class="col">
+                <div class="container-fluid">
+                    <h3 class="text-center title-example">Комплексный метод</h3>
+                    <ComplexTable></ComplexTable>
+                </div>
+            </div>
         </div>
     </div>
-        <div class="footer bg-dark text-light"><img height="64px" src="../assets/fsb.png">
-        </div>
+    <div class="footer bg-dark text-light">
+    </div>
 </div>
 </template>
 
@@ -31,8 +58,10 @@ import NavbarVue from '../components/Navbar.vue'
 import SearchVue from '../components/Search.vue'
 import ProbilityTable from '@/components/ProbilityTable.vue'
 import VectorisationTable from '../components/VectorisationTable.vue'
+import ComplexTable from '../components/ComplexTable.vue'
+
 export default {
-components: { NavbarVue, SearchVue, VectorisationTable, ProbilityTable }}
+components: { NavbarVue, SearchVue, VectorisationTable, ProbilityTable, ComplexTable }}
 </script>
 
 <style>

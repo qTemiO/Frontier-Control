@@ -6,6 +6,7 @@ const SET_LOADING = 'SET_LOADING';
 const SET_RESULT_RES = 'SET_RESULT_RES';
 const RESET_SEARCH = 'RESET_SEARCH';
 const SET_PROBITY_RES = 'SET_PROBILITY_RES';
+const SET_COMPLEX_RES = 'SET_COMPLEX_RES';
 
 export default createStore({
   state: {
@@ -13,7 +14,8 @@ export default createStore({
       searchQuery: '',
       loading: false,
       tnved: 'null',
-      probility: 'null'
+      probility: 'null',
+      complex: 'null'
     },
   },
   getters: {
@@ -21,10 +23,15 @@ export default createStore({
   },
   mutations: {
     [SET_SEARCH_QUERY]: (state, searchQuery) => state.searchQuery = searchQuery,
-    [SET_LOADING]: (state, loading) => state.loading = loading,
+    [SET_PROBITY_RES]: (state, probility) => state.probility = probility,
+    [SET_COMPLEX_RES]: (state, complex) => state.complex = complex,
     [SET_RESULT_RES]: (state, tnved) => state.tnved = tnved,
+    [SET_LOADING]: (state, loading) => state.loading = loading,
     [RESET_SEARCH]: state => state.tnved = null,
-    [SET_PROBITY_RES]: (state, prop) => state.probility = prop
+    [RESET_SEARCH]: state => state.probility = null,
+    [RESET_SEARCH]: state => state.complex = null,
+    
+
   },
   actions: {
     setSearchQuery({commit}, searchQuery) {
@@ -37,7 +44,9 @@ export default createStore({
         commit(SET_RESULT_RES, data);
         let probs = await axios.get(`http://localhost:8000/classificator/classificatorUser/${state.searchQuery}/`);
         commit(SET_PROBITY_RES, probs);
-        console.log(probs)
+        let compl = await axios.get(`http://localhost:8000/main/complex/${state.searchQuery}/`);
+        commit(SET_COMPLEX_RES, compl);
+        console.log(compl)
       } catch (e) {
         commit(RESET_SEARCH);
       }
