@@ -17,6 +17,7 @@
     "vue-chartjs": "^4.1.1",
     "vue-router": "^4.0.3",
     "vue-sidebar-menu-akahon": "^0.1.4",
+    "vued3tree": "^5.1.0",
     "vuex": "^4.0.2"
   },
   "devDependencies": {

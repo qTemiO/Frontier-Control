@@ -26,7 +26,7 @@
 				<tr v-for="item in probility.data.data" :key="item.class">
 					<td>{{item.class}}</td>
 					<td>
-                    {{item.probility}}
+                    {{item.probility * 100 }} %
                     </td>
 				</tr>
 			</tbody>
@@ -34,7 +34,7 @@
     </div>
 	</div>	
     <div v-else key="not-found">
-        <h1 style:="text-align:center">Не найдено</h1>
+        <h1 class="text-center">Не найдено</h1>
     </div>
 </div>
 </div>
@@ -54,7 +54,7 @@ export default {
 
 <style>
 .sscroll-table-body {
-	height: 200px;
+	height: 100px;
 	overflow-x: auto;
 	margin-top: 0px;
 	margin-bottom: 20px;

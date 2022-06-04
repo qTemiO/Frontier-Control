@@ -1,5 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import CodeSearchHelper from '../views/CodeSearchHelper.vue'
+import Documentation from '../views/Documentation.vue'
 
 const routes = [
   {
@@ -14,8 +15,16 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: HomeView
-  }
+    component: CodeSearchHelper
+  },
+  {
+    path: '/documentation/',
+    name: 'documentation',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: Documentation
+  },
 ]
 
 const router = createRouter({
