@@ -52,15 +52,24 @@ class recommendFZ(APIView):
 
         prediction = FilterConfig.predict(recommending_string, tfidf_mat=tfidf_mat, df=df, vectorizer=vectorizer)
 
-        results = []
-        for index, row in prediction.iterrows():
-            data = {
-                'code': row['KOD_TNVED_SPR'],
-                'description': row['OPISANIE_SPR']
-            }
-            results.append(data)
-
         logger.debug(prediction)
+
+        results = []
+
+        codes = []
+        descriptions = []
+
+        for index, row in prediction.iterrows():
+            code =  row['KOD_TNVED_SPR']
+            decription = row['OPISANIE_SPR']
+            
+            codes.append(code)
+            descriptions.append(decription)
+
+        top_codes = []
+        top_descriptions = []
+
+        
 
         return JsonResponse({
             'data': results
