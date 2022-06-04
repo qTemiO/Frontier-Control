@@ -1,7 +1,7 @@
 <template>
 <div class="mainback">
     <NavbarVue></NavbarVue>
-    <div class="container-fluid background shadow-lg mt-5"
+    <div class="container-fluid background_home shadow-lg"
     style="width: 70%;">
         <div class="container-fluid">
               <img src="../assets/logo3.png" height="200" class="mx-auto d-block"
@@ -10,7 +10,11 @@
         <div class="row">
           <div class="col">
                     <SearchVue></SearchVue>
-          <div> Введенный текст: {{ search }}</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <TNVEDList></TNVEDList>
           </div>
         </div>
     </div>
@@ -25,8 +29,9 @@
 <script>
 import NavbarVue from '../components/Navbar.vue'
 import SearchVue from '../components/Search.vue'
+import TNVEDList from '../components/TNVEDList.vue'
 export default {
-components: { NavbarVue, SearchVue }}
+components: { NavbarVue, SearchVue, TNVEDList }}
 </script>
 
 <style>
@@ -69,12 +74,15 @@ components: { NavbarVue, SearchVue }}
 
 
 
-.background{
+.background_home{
   background-color: rgba(255, 255, 255, 0.849);
+  height: 900px;
+  
 }
 
 .mainback {
   background-image: url('../assets/artbk2.jpg');
+  
 }
 
 .floppa {

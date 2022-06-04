@@ -12,6 +12,9 @@ from nltk.tokenize import word_tokenize
 from nltk.stem.snowball import SnowballStemmer 
 
 nltk.download('omw-1.4')
+nltk.download('stopwords')
+nltk.download('punkt')
+nltk.download('wordnet')
 
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -161,7 +164,7 @@ class FilterUserConfig(AppConfig):
 
     logger.debug(f'\n{VECTOR_USER_FILTER_DATAFRAME}')
 
-    VECTOR_USER_FILTER_DATAFRAME = clean_sentences(VECTOR_USER_FILTER_DATAFRAME)
+    VECTOR_USER_FILTER_DATAFRAME = clean_sentences(VECTOR_USER_FILTER_DATAFRAME[:1000])
     VECTOR_USER_FILTER_DATAFRAME.dropna(inplace=True)
 
     # Adapt stop words

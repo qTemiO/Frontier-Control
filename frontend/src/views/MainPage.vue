@@ -1,55 +1,15 @@
 <template>
 <div class="mainback">
     <NavbarVue></NavbarVue>
-    <div class="container-fluid background shadow-lg mt-5"
+    <div class="container-fluid background shadow-lg"
     style="width: 80%;">
         <div class="row">
-            <h1 class="bg-danger maintext text-center me-auto ms-auto  mt-4">АВТОМАТИЗИРОВАННАЯ СИСТЕМА КЛАССИФИКАЦИИ КОДА ТНВ ЕАЭС "ВЕЛЕС"</h1>
+            <h1 style="margin-top: 50px" class="bg-danger text-break d-inline-flex p-2 maintext text-center me-auto ms-auto  mt-4">АВТОМАТИЗИРОВАННАЯ СИСТЕМА КЛАССИФИКАЦИИ КОДА ТНВ ЕАЭС "ВЕЛЕС"</h1>
             <div class="col">
                 <img src="../assets/logo2.svg" width="500px"
                 height="500px" class="rounded mx-auto d-block"
                 />
-            </div>
-            <div class="col" style="margin-right: 50px;">
-                <div class="row">
-                    <div class="card shadow rounded">
-                        <div class="card-header">
-                            Загрузка воздуха Жоры
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Загрузите воздух не менее 100л</h5>
-                            <div class="input-group mb-3">
-                                <button class="btn btn-success btn-outline-dark"
-                                type="button"
-                                id="inputGroupFileAddon03">Загрузить</button>
-                                <input type="file" class="form-control" id="inputGroupFile03"
-                                aria-describedby="inputGroupFileAddon03"
-                                aria-label="Upload">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="card shadow rounded">
-                        <div class="card-header">
-                            Сливы шкур
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Загрузите нюдсы чей-то матери</h5>
-                            <div class="input-group mb-3">
-                                <button class="btn btn-success btn-outline-dark"
-                                type="button"
-                                id="inputGroupFileAddon03">Загрузить</button>
-                                <input type="file" class="form-control" id="inputGroupFile03"
-                                aria-describedby="inputGroupFileAddon03"
-                                aria-label="Upload">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
+        </div>
         </div>
         <div class="container mt-3">
             <div class="wrapper row">
@@ -60,13 +20,15 @@
                             <div class="front">
                                 <div class="header">
                                     <i class="fa fa-creative-commons fa-2x"></i>
-                                    <h3>ГРАФ ЖОРЫ</h3>
+                                    <h3>Рекомендательная оценка</h3>
                                 </div>
-                                <img height="75%" src="../assets/pig2.jpg">
+                                <img height="75%" src="../assets/Class.png">
                             </div>
                             <div class="back">
-                                <h3>ГРАФ ЖОРЫ</h3>
-                                <p>Он их ест?????</p>
+                                <h3>Рекомендательная система</h3>
+                                <p>Способствует поддержке принятия решений оператора/декларанта по определению кода ТНВ. 
+                                  Выполнено с помощью алогритмов векторизации и алгоритмов определения схожести векторов в n-мерном 
+                                  пространстве согласно их частотному распределению и их семантической близости.</p>
                             </div>
                         </div>
                     </div>
@@ -77,15 +39,14 @@
                             <div class="front">
                                 <div class="header">
                                     <i class="fa fa-creative-commons fa-2x"></i>
-                                    <h3>ВИЧ-ИНФЕКЦИЯ ЗАХАРА</h3>
+                                    <h3>Графовое представление</h3>
                                 </div>
-                                <img height="75%" src="../assets/penis.svg">
+                                <img height="75%" src="../assets/Tree.png">
                             </div>
                             <div class="back">
-                                <h3>ВИЧ-ИНФЕКЦИЯ ЗАХАРА</h3>
-                                <p>Наконец Захар
-                                    умер
-                                    :)
+                                <h3>Графовое представление(В Разработке)</h3>
+                                <p>Представляет собой удобную систему поиска и классификации согласно международным стандартам кодировок ТНВД. 
+                                  Выполнено с помощью библиотеки D3.js.
                                 </p>
                             </div>
                         </div>
@@ -97,14 +58,14 @@
                             <div class="front">
                                 <div class="header">
                                     <i class="fa fa-creative-commons fa-2x"></i>
-                                    <h3>АРТЕМ ЗАЩЕМЛЕННЫЙ</h3>
+                                    <h3>Вероятностная оценка</h3>
                                 </div>
-                                <img height="75%" src="../assets/art.png">
+                                <img height="75%" src="../assets/P.png">
                             </div>
                             <div class="back">
-                                <h3>АРТЕМ ЗАЩЕМЛЕННЫЙ</h3>
-                                <p>Артем. НАХУЯ.
-                                    ТЫ. Защемил!?</p>
+                                <h3>Вероятностная оценка</h3>
+                                <p>Используется для определения смежных классов в рамках системы поддержки принятия решений. 
+                                  Основывается на алгоритмах векторизации и Логистическая регрессия</p>
                             </div>
                         </div>
                     </div>
@@ -114,7 +75,7 @@
     </div>
     <footer>
 
-        <div class="bg-dark text-light">О нас: Мы работаем тут <img height="64px" src="../assets/fsb.png">
+        <div class="bg-dark text-light"> <img height="16px" src="../assets/fsb.png">
         </div>
     </footer>
 </div>
@@ -218,7 +179,7 @@ components: { NavbarVue }
   -ms-transform: rotateY(0deg);
   transform: rotateY(0deg);
   background: rgba(255, 255, 255, 0);
-  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 5px 0 rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid #f5f5f500;
 }
 i {
@@ -230,7 +191,7 @@ h3 {
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
-  margin: 0 0 15px;
+  margin: 10px 0 15px;
 }
 p {
   font-size: 14px;

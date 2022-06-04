@@ -25,7 +25,11 @@ SECRET_KEY = 'django-insecure--g8cjlvu*pt_s(h892=gkym5)aewjp@84y+s9^%6jm(&cj0o^)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.255.230']
+ALLOWED_HOSTS = [
+    '192.168.255.230', 
+    'localhost', 
+    '127.0.0.1'
+    ]
 
 
 # Application definition
@@ -52,6 +56,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'backend.urls'
@@ -139,29 +145,9 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 CORS_ORIGIN_ALLOW_ALL = True
 
-# CORS_ALLOWED_ORIGINS = [
-#     "http://localhost:8080",
-#     "http://127.0.0.1:8000",
-#     "http://192.168.255.20:8080"    
-# ]
-
-# CSRF_TRUSTED_ORIGINS = [
-#     'http://192.168.255.20:8080',
-# ]
-
-# from corsheaders.defaults import default_headers
-
-# CORS_ALLOW_HEADERS = default_headers + (
-#     'Access-Control-Allow-Headers',
-#     'Access-Control-Allow-Credentials',
-#     'Access-Control-Allow-Origin',
-#     'accept',
-#     'accept-encoding',
-#     'authorization',
-#     'content-type',
-#     'dnt',
-#     'origin',
-#     'user-agent',
-#     'x-csrftoken',
-#     'x-requested-with',
-# )
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8080",
+    "http://127.0.0.1:8000",
+    "http://192.168.255.20:8080",
+    "http://192.168.255.230:8080"    
+]
