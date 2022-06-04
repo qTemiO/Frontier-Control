@@ -12,6 +12,11 @@
                     <SearchVue></SearchVue>
           </div>
         </div>
+        <div class="row">
+          <div class="col">
+            <TNVEDList></TNVEDList>
+          </div>
+        </div>
     </div>
     <footer>
 
@@ -24,8 +29,9 @@
 <script>
 import NavbarVue from '../components/Navbar.vue'
 import SearchVue from '../components/Search.vue'
+import TNVEDList from '../components/TNVEDList.vue'
 export default {
-components: { NavbarVue, SearchVue }}
+components: { NavbarVue, SearchVue, TNVEDList }}
 </script>
 
 <style>

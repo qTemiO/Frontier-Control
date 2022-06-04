@@ -12,6 +12,9 @@ from nltk.tokenize import word_tokenize
 from nltk.stem.snowball import SnowballStemmer 
 
 nltk.download('omw-1.4')
+nltk.download('stopwords')
+nltk.download('punkt')
+nltk.download('wordnet')
 
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfVectorizer
