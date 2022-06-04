@@ -1,7 +1,6 @@
 <template>
 <div class="scroll-table">
     <div v-if="loading" key="loading">
-        Loading
     </div>
     <div v-else-if="tnved" key="tnved.data">
 	<table>
@@ -25,7 +24,6 @@
     </div>
 	</div>	
     <div v-else key="not-found">
-        Не найдено
     </div>
 </div>
 </template>

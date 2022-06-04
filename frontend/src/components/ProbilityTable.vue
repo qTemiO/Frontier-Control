@@ -10,7 +10,7 @@
                 </div>
                 </div>
     </div>
-    <div v-else-if="tnved" key="tnved.data">
+    <div v-else-if="probility" key="probility.probs">
 	<table>
 		<thead>
 			<tr>
@@ -23,13 +23,10 @@
 	<div class="sscroll-table-body ">
 		<table>
 			<tbody>
-				<tr v-for="item in tnved.data" :key="item.code">
-					<td>{{item.code}}</td>
+				<tr v-for="item in probility.data.data" :key="item.class">
+					<td>{{item.class}}</td>
 					<td>
-                    <div class="progress">
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 32%" aria-valuenow="75" 
-                    aria-valuemin="0" aria-valuemax="100">32%</div>
-                    </div>
+                    {{item.probility}}
                     </td>
 				</tr>
 			</tbody>
@@ -37,7 +34,7 @@
     </div>
 	</div>	
     <div v-else key="not-found">
-        Не найдено
+        <h1 style:="text-align:center">Не найдено</h1>
     </div>
 </div>
 </div>
@@ -50,8 +47,8 @@
 import {mapState} from 'vuex';
 
 export default {
-  name: 'tnved',
-  computed: mapState(['loading', 'tnved']),
+  name: 'probility',
+  computed: mapState(['loading', 'probility']),
 };
 </script>
 

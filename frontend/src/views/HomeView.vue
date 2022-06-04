@@ -83,7 +83,6 @@ components: { NavbarVue, SearchVue, VectorisationTable, ProbilityTable }}
 
 .mainback {
   background-image: url('../assets/artbk2.jpg');
-  
 }
 
 .floppa {

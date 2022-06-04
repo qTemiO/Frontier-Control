@@ -35,9 +35,9 @@ export default createStore({
       try {
         const {data} = await axios.get(`http://localhost:8000/filter/recommendUser/${state.searchQuery}/`);
         commit(SET_RESULT_RES, data);
-        let props = await axios.get(`http://localhost:8000/classificator/classificatorUser/${state.searchQuery}/`);
-        commit(SET_PROBITY_RES, props);
-        console.log(props)
+        let probs = await axios.get(`http://localhost:8000/classificator/classificatorUser/${state.searchQuery}/`);
+        commit(SET_PROBITY_RES, probs);
+        console.log(probs)
       } catch (e) {
         commit(RESET_SEARCH);
       }
