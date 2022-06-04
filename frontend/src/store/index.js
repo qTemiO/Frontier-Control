@@ -31,7 +31,7 @@ export default createStore({
     async search({commit, state}) {
       commit(SET_LOADING, true);
       try {
-        let {data} = await axios.get(`http://192.168.255.230:8000/filter/recommendUser/${state.searchQuery}/`);
+        let {data} = await axios.get(`http://localhost:8000/filter/recommendUser/${state.searchQuery}/`);
         commit(SET_RESULT_RES, data);
         console.log(data)
       } catch (e) {
