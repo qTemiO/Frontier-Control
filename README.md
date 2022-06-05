@@ -12,9 +12,9 @@
 Если хотите протестировать на других выборках - сохраните excel-файл в формате текста, юникод (В докере под ubuntu 20.04 не читается кодировкой ansi, mbcs.)
 Если хотите запустить backend ручками - нужно изменить пути для файлов и модели .joblib, установить окружение
 
-`python -m venv venv`
-`venv\Scripts\activate`
-`pip install -r requirements.txt`
+1. `python -m venv venv`
+2. `venv\Scripts\activate`
+3. `pip install -r requirements.txt`
 
 Во всех остальных случаях - используйте Docker, либо docker-compose.
 Мы использовали следующий подход: preprocessing(tokenization, lemmatization, stemming) - tfidf_Vectorizer - LogisticRegression - train\prediction
@@ -31,9 +31,9 @@
 ## Vue
 Frontend запускается командами:
 
-`cd frontend`
-`npm install`
-`npm run serve`
+1. `cd frontend`
+2. `npm install`
+3. `npm run serve`
 
 Vue служит только для визуализации, обработки данных внутри Vue не происходит.
 На страничке **"Классификация кода ТН ВЭД"** отображаются 3 таблицы и график.
