@@ -48,7 +48,7 @@ class ClassificatorConfig(AppConfig):
     name = 'classificator'
 
     logreg = 0
-    with open('../backend/classificator/model/probility.joblib', 'rb') as fid:
+    with open('/code/backend/classificator/model/probility.joblib', 'rb') as fid:
         logreg = load(fid)
 
     df_res = FilterUserConfig.VECTOR_USER_FILTER_DATAFRAME

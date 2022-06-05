@@ -6,7 +6,7 @@ services:
     restart: always
     build:
       context: ./backend
-    command: python backend/manage.py runserver localhost:8000
+    command: python backend/manage.py makemigrations && python backend/manage.py migrate $$ python backend/manage.py runserver localhost:8000
     volumes:
       - '.:/code'
     ports:
