@@ -49,7 +49,6 @@ export default {
 	overflow-x: auto;
 	margin-top: 0px;
 	margin-bottom: 20px;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.699);
 }
 .sccroll-table table {
 	box-shadow: 0 7px 6px rgba(0,0,0,0.3);
