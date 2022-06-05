@@ -12,10 +12,7 @@
           <a class="nav-link" aria-current="page" href="#/">Главная</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#/tnved_classification/">Классификация кода ТНВ</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#/documentation/">Документация (В Разработке)</a>
+          <a class="nav-link" href="#/tnved_classification/">Классификация кода ТН ВД</a>
         </li>
       </ul>
     </div>

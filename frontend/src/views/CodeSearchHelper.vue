@@ -14,15 +14,21 @@
         </div>
         <div class="row mt-4">
           <div class="col">
-            <h3 class="text-center title-example">Метод вероятностной оценки</h3>
+            <div class="row">
+              <h3 class="text-center title-example">Метод вероятностной оценки</h3>
             <ProbilityTable></ProbilityTable>
-            <h3 class="text-center title-example">Метод векторизации</h3>
+            </div>
+            <div class="row">
+              <h3 class="text-center title-example">Метод векторизации</h3>
             <VectorisationTable></VectorisationTable>
+            </div>
+            
           </div>
           <div class="col">
             <div class="container-fluid">
               <h3 class="text-center title-example">Комплексный метод</h3>
               <ComplexTable></ComplexTable>
+              <h3 class="text-center title-example">Интерактивная документация в виде дерева</h3>
               <TreeVII></TreeVII>
             </div>
           </div>
@@ -40,9 +46,10 @@ import ProbilityTable from '@/components/ProbilityTable.vue'
 import VectorisationTable from '../components/VectorisationTable.vue'
 import ComplexTable from '../components/ComplexTable.vue'
 import TreeVII from '../components/charts/TreeVII.vue'
+import BarChart from '../components/charts/BarChart.vue'
 
 export default {
-components: { NavbarVue, SearchVue, VectorisationTable, ProbilityTable, ComplexTable, TreeVII }}
+components: { NavbarVue, SearchVue, VectorisationTable, ProbilityTable, ComplexTable, TreeVII, BarChart }}
 </script>
 
 <style>
@@ -104,7 +111,7 @@ components: { NavbarVue, SearchVue, VectorisationTable, ProbilityTable, ComplexT
 
 .background_home{
   background-color: rgba(255, 255, 255, 0.849);
-  height: 1200px;
+
 }
 
 .mainback {
