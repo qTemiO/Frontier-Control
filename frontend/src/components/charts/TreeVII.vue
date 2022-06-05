@@ -1,81 +1,71 @@
 <template>
-  <v-chart class="chart" :option="option" />
+  <div>
+    <vue-tree
+      style="width: 100%; height: 300px; border: 1px solid gray"
+      :dataset="sampleData"
+      :config="treeConfig"
+    >
+      <template v-slot:node="{ node, collapsed }">
+        <span
+          class="tree-node"
+          :style="{
+            border: collapsed ? '2px solid grey' : '',
+            borderRadius: '50%',
+          }"
+          >{{ node.value }}</span
+        >
+      </template>
+    </vue-tree>
+  </div>
 </template>
-
 <script>
-import { use } from "echarts/core";
-import { CanvasRenderer } from "echarts/renderers";
-import { PieChart } from "echarts/charts";
-import {
-  TitleComponent,
-  TooltipComponent,
-  LegendComponent
-} from "echarts/components";
-import VChart, { THEME_KEY } from "vue-echarts";
-import { ref, defineComponent } from "vue";
+import VueTree from "@ssthouse/vue3-tree-chart";
+import "@ssthouse/vue3-tree-chart/dist/vue3-tree-chart.css";
 
-use([
-  CanvasRenderer,
-  PieChart,
-  TitleComponent,
-  TooltipComponent,
-  LegendComponent
-]);
-
-export default defineComponent({
-  name: "HelloWorld",
-  components: {
-    VChart
+export default {
+  components: { VueTree },
+  data() {
+    return {
+      sampleData: {
+        value: "Мать Кайрата",
+        children: [
+          { value: "Кайрат", children: [{ value: "НК" }, { value: "Пизда" }] },
+          { value: "Брат Кайрата" },
+        ],
+      },
+      treeConfig: { nodeWidth: 120, nodeHeight: 80, levelHeight: 200 },
+    };
   },
-  provide: {
-    [THEME_KEY]: "dark"
-  },
-  setup () {
-    const option = ref({
-      title: {
-        text: "Traffic Sources",
-        left: "center"
-      },
-      tooltip: {
-        trigger: "item",
-        formatter: "{a} <br/>{b} : {c} ({d}%)"
-      },
-      legend: {
-        orient: "vertical",
-        left: "left",
-        data: ["Direct", "Email", "Ad Networks", "Video Ads", "Search Engines"]
-      },
-      series: [
-        {
-          name: "Traffic Sources",
-          type: "pie",
-          radius: "55%",
-          center: ["50%", "60%"],
-          data: [
-            { value: 335, name: "Direct" },
-            { value: 310, name: "Email" },
-            { value: 234, name: "Ad Networks" },
-            { value: 135, name: "Video Ads" },
-            { value: 1548, name: "Search Engines" }
-          ],
-          emphasis: {
-            itemStyle: {
-              shadowBlur: 10,
-              shadowOffsetX: 0,
-              shadowColor: "rgba(0, 0, 0, 0.5)"
-            }
-          }
-        }
-      ]
-    });
+};
 
-    return { option };
-  }
-});
+// let sampleData =  {
+//   value: "1",
+//   children: [
+//     { value: "2", children: [{ value: "4" }, { value: "5" }] },
+//     { value: "3" },
+//   ],
+// };
+// let treeConfig = { nodeWidth: 120, nodeHeight: 80, levelHeight: 200 };
 </script>
 
-<style scoped>
-.chart {
-  height: 400px;
+
+<style>
+#TreeVII {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: right;
+  color: #2d6328;
+  margin-top: 2px;
+  box-shadow:  0 7px 6px rgba(0,0,0,0.3);;
+}
+.tree-node {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: rgba(233, 184, 207, 0.836);
+  text-align: right;
+  line-height: 28px;
 }
 </style>

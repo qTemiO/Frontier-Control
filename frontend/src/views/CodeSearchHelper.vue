@@ -16,14 +16,14 @@
           <div class="col">
             <h3 class="text-center title-example">Метод вероятностной оценки</h3>
             <ProbilityTable></ProbilityTable>
-            <h3 class="text-center title-example">Метод векторизация</h3>
+            <h3 class="text-center title-example">Метод векторизации</h3>
             <VectorisationTable></VectorisationTable>
           </div>
           <div class="col">
-
             <div class="container-fluid">
               <h3 class="text-center title-example">Комплексный метод</h3>
               <ComplexTable></ComplexTable>
+              <TreeVII></TreeVII>
             </div>
           </div>
         </div>
@@ -39,9 +39,10 @@ import SearchVue from '../components/Search.vue'
 import ProbilityTable from '@/components/ProbilityTable.vue'
 import VectorisationTable from '../components/VectorisationTable.vue'
 import ComplexTable from '../components/ComplexTable.vue'
+import TreeVII from '../components/charts/TreeVII.vue'
 
 export default {
-components: { NavbarVue, SearchVue, VectorisationTable, ProbilityTable, ComplexTable }}
+components: { NavbarVue, SearchVue, VectorisationTable, ProbilityTable, ComplexTable, TreeVII }}
 </script>
 
 <style>
