@@ -2,3 +2,5 @@ venv
 __pycache__
 notes/description_20211126.docx
 .idea
+notes/user_dataframe.txt
+notes/model_dataframe.txt
