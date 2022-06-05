@@ -14,9 +14,6 @@
         <li class="nav-item">
           <a class="nav-link" href="#/tnved_classification/">Классификация кода ТНВ</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#/documentation/">Документация (В Разработке)</a>
-        </li>
       </ul>
     </div>
     <a class="navbar-brand" href="#/">POWERED BY</a>
