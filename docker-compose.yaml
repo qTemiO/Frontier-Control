@@ -1,0 +1,26 @@
+version: '3.10'
+
+services:
+  django:
+    container_name: backend
+    restart: always
+    build:
+      context: ./backend
+    command: python backend/manage.py runserver localhost:8000
+    volumes:
+      - '.:/code'
+    ports:
+      - 8000:8000
+    expose:
+      - 8000
+  vue:
+    container_name: frontend
+    restart: always
+    build: 
+      context: ./frontend
+    volumes:
+      - './frontend/vue'
+    ports:
+      - 8080:8080
+    expose:
+      - 8080

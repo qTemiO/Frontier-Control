@@ -128,7 +128,7 @@ class FilterConfig(AppConfig):
     name = 'filter'
 
     VECTOR_FILTER_DATAFRAME = pd.read_csv(
-        '../backend/filter/data/model_dataframe.csv', encoding='mbcs', sep=';')
+        '../backend/filter/data/model_dataframe.txt', sep='\t',encoding='utf-16-le')
 
     logger.debug(f'\n{VECTOR_FILTER_DATAFRAME}')
 
@@ -155,7 +155,7 @@ class FilterUserConfig(AppConfig):
     name = 'filter'
 
     VECTOR_USER_FILTER_DATAFRAME = pd.read_csv(
-        '../backend/filter/data/user_dataframe.csv', encoding='mbcs', sep=';')
+        '../backend/filter/data/user_dataframe.txt', sep='\t',encoding='utf-16-le')
 
     VECTOR_USER_FILTER_DATAFRAME = VECTOR_USER_FILTER_DATAFRAME.drop(columns=['DATA'])
     VECTOR_USER_FILTER_DATAFRAME['OPISANIE_SPR'] = VECTOR_USER_FILTER_DATAFRAME['OPISANIE']
